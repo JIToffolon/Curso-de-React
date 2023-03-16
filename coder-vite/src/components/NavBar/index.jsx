@@ -1,22 +1,33 @@
 import CartWidget from "../CartWidget";
 import "./navbar.css";
+import { NavLink } from "react-router-dom";
 
-
-function NavBar() { 
-  
-    return(
-  
-      <div className="nav">
+function NavBar() {
+  return (
+    <div className="nav">
       <ul className="lista">
-        <li><button>Semillas</button></li>
-        <li><button>Medallones</button></li>
-        <li><button>Seitan</button></li>
-        <li><button>Legumbres</button></li>
+        <li>
+          <NavLink to={"/"}>
+            <button>Home</button>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={"/category/fit"}>
+            <button>Fit</button>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={"/category/fat"}>
+            <button>Fat</button>
+          </NavLink>
+        </li>
+        <li>
+          <button>Perfil</button>
+        </li>
       </ul>
-      <CartWidget/>
-      </div>
-  )
-    ; }
-  
-  export default NavBar
-      
+      <CartWidget />
+    </div>
+  );
+}
+
+export default NavBar;
