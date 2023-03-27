@@ -1,12 +1,15 @@
 import "./itemDetail.css";
 import { ItemCount } from "../ItemCount/itemCount";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Context } from "../../Context";
 const ItemDetail = ({ product }) => {
+  const { onAdd } = useContext(Context);
   const [añadir, setAñadir] = useState(0);
 
-  function onAdd(counter) {
+  function onAddProduct(counter) {
     setAñadir(counter);
+    onAdd(product, counter);
   }
 
   return (
@@ -19,7 +22,9 @@ const ItemDetail = ({ product }) => {
         <p>{product.description}</p>
       </div>
       <div>
-        {añadir == 0 && <ItemCount stock={product.stock} onAdd={onAdd} />}
+        {añadir == 0 && (
+          <ItemCount stock={product.stock} onAdd={onAddProduct} />
+        )}
         <div>
           {añadir >= 1 && (
             <NavLink to={"/cart"}>

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import ItemRoot from "./routes/item";
 import Cart from "./routes/cart";
+import ProovedorCustomizado from "./Context/index";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <ProovedorCustomizado>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </ProovedorCustomizado>
 );
