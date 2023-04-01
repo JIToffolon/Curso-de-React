@@ -18,7 +18,7 @@ const ItemDetail = ({ product }) => {
         {product.name} - ${product.price}
       </h2>
       <div>
-        <img className="imagen" src={product.image} />
+        <img className="imagen" src={`/assets/images/${product.image}`} />
         <p>{product.description}</p>
       </div>
       <div>

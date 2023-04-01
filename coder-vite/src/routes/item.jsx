@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 function ItemRoot() {
   const params = useParams();
+
   return (
     <div>
       <NavBar />

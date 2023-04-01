@@ -1,16 +1,28 @@
 import { useContext, useEffect, useState } from "react";
-import products from "../../mocks/products";
 import ItemDetail from "../ItemDetail";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 
-function ItemDetailContainer({ detalleDelProducto }) {
+function ItemDetailContainer({}) {
   const [product, setProduct] = useState({});
+  const params = useParams();
 
   useEffect(() => {
-    const productoDetallado = products.find(
-      (product) => product.id == detalleDelProducto
-    );
-    setProduct(productoDetallado);
-  }, [detalleDelProducto]);
+    const db = getFirestore();
+    const itemRef = doc(db, "items", params.id);
+
+    getDoc(itemRef)
+      .then((result) => {
+        if (result.exists()) {
+          setProduct({ id: result.id, ...result.data() });
+        }
+      })
+      .catch((error) => console.log({ error }));
+  }, []);
+
+  if (!product) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div>

@@ -6,6 +6,19 @@ import ItemRoot from "./routes/item";
 import Cart from "./routes/cart";
 import ProovedorCustomizado from "./Context/index";
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAkUGiW_TBO6FaSjH0w8V46VwCxweF2AQI",
+  authDomain: "curso-de-react-ecommerce.firebaseapp.com",
+  projectId: "curso-de-react-ecommerce",
+  storageBucket: "curso-de-react-ecommerce.appspot.com",
+  messagingSenderId: "326289214740",
+  appId: "1:326289214740:web:22dadb700a437956a18601",
+};
+
+initializeApp(firebaseConfig);
+
 const router = createBrowserRouter([
   {
     path: "/",

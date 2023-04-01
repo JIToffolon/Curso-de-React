@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-import products from "../../mocks/products";
 import "./item.css";
 
-const product = products;
-
 function Item({ product }) {
+  console.log(product.image);
   return (
     <div>
       <div>
         <Link to={`/item/${product.id}`}>
-          <img className="imagen" src={product.image} alt={product.name} />
+          <img
+            className="imagen"
+            src={`/assets/images/${product.image}`}
+            alt={product.name}
+          />
         </Link>
 
         <div>
