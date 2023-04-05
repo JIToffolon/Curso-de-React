@@ -1,13 +1,17 @@
 import "./cartwidget.css";
 import { Context } from "../../Context";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 
 function CartWidget() {
   const { itemsAgregados } = useContext(Context);
+  const {cartCantidad} = useContext(Context)
   return (
     <div className="cart">
-      <img src="https://cdn-icons-png.flaticon.com/512/891/891462.png" />
-      <span>{itemsAgregados.length} </span>
+      <NavLink to="/cart">
+        <img src="../Public/Icons/carrito.png" />
+      </NavLink>
+      <span>{itemsAgregados.length === 0 ? "0" : cartCantidad()} </span>
     </div>
   );
 }

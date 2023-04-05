@@ -8,6 +8,7 @@ import {
   where,
 } from "firebase/firestore";
 
+
 function ItemListContainer({ categoriaRuta, paramsId }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -41,29 +42,8 @@ function ItemListContainer({ categoriaRuta, paramsId }) {
         .catch((error) => console.log({ error }));
     }
   }, [paramsId]);
-  /*useEffect(() => {
-    const productsPromise = new Promise((resolve, reject) =>
-      setTimeout(() => resolve(Products), 2000)
-    );
-    productsPromise
-      .then((response) => {
-        if (categoriaRuta) {
-          const productoFiltrado = response.filter(
-            (product) => product.category === paramsId
-          );
-
-          setProducts(productoFiltrado);
-        } else {
-          setProducts(response);
-        }
-      })
-
-      .catch((err) => console.log(err));
-  }, [paramsId]);
-
-  console.log({ products }); */
   return (
-    <div>
+    <div className="itemlist">
       <ItemList products={products} />
     </div>
   );

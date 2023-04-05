@@ -8,7 +8,7 @@
   display: flex;
   width: 100vw;
   height: 80px;
-  background-color: beige;
+  background-color: rgba(236, 217, 8, 0.979);
   align-items: center;
   justify-content: space-around;
   border: 3px solid black;
@@ -18,14 +18,33 @@
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 45px;
+  gap: 60px;
+  
 }
 
 .lista button {
-  background-color: rgb(228, 152, 53);
+  background-color: rgb(12, 12, 12);
+  width: 100px;
+  height: 50px;
   border: 2px solid black;
-  color: black;
-  font-size: 15px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  border-radius: 5px;
+  color: rgb(238, 241, 12);
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+ 
 }
+button:hover {
+  background-color: #272626;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.icon2 {
+  width: 100px;
+  height: 100px;
+}
+

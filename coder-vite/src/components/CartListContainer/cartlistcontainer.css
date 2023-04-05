@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Cartlistcontainer {
+  background-color: rgb(241, 241, 88);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../../../public/assets/images/backgroundimage6.png);
+  background-size: cover;
+}
+
+.Cartlistcontainer h3 {
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 25px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+
+
+}
+
+.Cartlistcontainer button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+}
+
+.Cartlistcontainer button:hover {
+  background-color: #3e8e41;
+}
+
+.Cartlistcontainer .botones {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(234, 250, 4);
+  border: 3px solid #080808;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.Cartlistcontainer .mensaje {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px;
+  color: white;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.Cartlistcontainer .mensaje h3 {
+  font-size: 55px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  padding: 25px;
+}
+
+.Cartlistcontainer .mensaje button {
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+}

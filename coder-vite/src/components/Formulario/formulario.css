@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carritoform {
+  background-color: rgb(241, 241, 88);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../../../public/assets/images/backgroundimage6.png);
+  background-size: cover;
+}
+
+.carritoform h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
+  color: rgb(247, 242, 242);
+  -webkit-text-stroke: 0.5px black;
+  margin: 35px;
+}
+
+.carritoform div {
+  font-size: 20px;
+}
+
+.carritoform h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  margin: 35px;
+  padding: 35px;
+  color: yellow;
+}
+
+.carritoform a {
+  
+  color: yellow;
+}
+
+.carritoform button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  margin: 10px;
+}
+
+.carritoform button:hover {
+  background-color: #3e8e41;
+}
+
+.carritoform .text {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  background-color: rgb(234, 250, 4);
+  border: 3px solid #080808;
+  border-radius: 5px;
+}
+
+.carritoform .modal-custom {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background-color: rgb(234, 250, 4);
+  border: 3px solid #080808;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 15px;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carritoform .modal-custom form {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  background-color: rgb(234, 250, 4);
+  border: 3px solid #080808;
+  border-radius: 5px;
+}
+
+.carritoform .modal-custom form div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.carritoform .modal-custom form div h5 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}

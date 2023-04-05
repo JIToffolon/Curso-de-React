@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-
+import "./itemDetailcontainer.css";
 function ItemDetailContainer({}) {
   const [product, setProduct] = useState({});
   const params = useParams();
@@ -21,11 +21,11 @@ function ItemDetailContainer({}) {
   }, []);
 
   if (!product) {
-    return <p>Loading...</p>;
+    return <h2>Loading...</h2>;
   }
 
   return (
-    <div>
+    <div className="itemdetailcontainer">
       <ItemDetail product={product} />
     </div>
   );

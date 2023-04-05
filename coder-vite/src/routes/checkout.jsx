@@ -1,17 +1,18 @@
-import CartListContainer from "../components/CartListContainer";
 import NavBar from "../components/NavBar";
+import Formulario from "../components/Formulario";
 import Footer from "../components/footer";
 
 
-function Cart() {
+function Checkout() {
   
   return (
     <div>
       <NavBar />
-      <CartListContainer />
+      <Formulario/>
       <Footer/>
+      
     </div>
   );
 }
 
-export default Cart;
+export default Checkout;

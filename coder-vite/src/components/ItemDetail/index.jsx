@@ -13,25 +13,24 @@ const ItemDetail = ({ product }) => {
   }
 
   return (
-    <div>
-      <h2>
-        {product.name} - ${product.price}
-      </h2>
-      <div>
+    <div className="itemdetail">
+      <div className="Card">
+        <h3>
+          {product.name} - ${product.price}
+        </h3>
+
         <img className="imagen" src={`/assets/images/${product.image}`} />
-        <p>{product.description}</p>
-      </div>
-      <div>
+        <h4>{product.description}</h4>
+
         {añadir == 0 && (
           <ItemCount stock={product.stock} onAdd={onAddProduct} />
         )}
-        <div>
-          {añadir >= 1 && (
-            <NavLink to={"/cart"}>
-              <button>Finalizar Compra</button>
-            </NavLink>
-          )}
-        </div>
+
+        {añadir >= 1 && (
+          <NavLink to={"/cart"}>
+            <button>Ir al Carrito</button>
+          </NavLink>
+        )}
       </div>
     </div>
   );
